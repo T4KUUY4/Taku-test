@@ -34,7 +34,7 @@ Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](http
 <script> src="scripts/stlviewer.js"</script>
 <script type="text/javascript">
     window.onload = function() {
-    STLViewer("https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/STLs/Test_Prints/Voron_Design_Cube_v7.stl", "model")
+    STLViewer("Voron_Design_Cube_v7.stl", "model")
     }
 </script>
 

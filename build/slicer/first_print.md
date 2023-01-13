@@ -4,25 +4,69 @@ title: First Print
 parent: The Build
 nav_order: 7
 ---
-<script src="../../scripts/stl_viewer.min.js"></script>
-<script>
-            var stl_viewer=new StlViewer
-            (
-                document.getElementById("stl_cont"),
-                {
-                    models:
-                    [
-                        {filename:"https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/STLs/Test_Prints/Voron_Design_Cube_v7.stl"}
-                    ]
-                }
-            );
-        </script>
+<script src="/build/three.min.js"></script>
+<script src="/examples/js/loaders/STLLoader.js"></script>
+<script src="/examples/js/controls/OrbitControls.js"></script>
+
 # First Print
 
 Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/STLs/Test_Prints), and open the file in your chosen slicer. 
 
-<div id="stl_cont"></div>
+<div id="model" style="width: 500px; height: 500px"> </div>
 
+<script>
+function STLViewer(model, elementID) {
+    var elem = document.getElementById(elementID)
+    var camera = new THREE.PerspectiveCamera(70, 
+    elem.clientWidth/elem.clientHeight, 1, 1000);
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(elem.clientWidth, elem.clientHeight);
+    elem.appendChild(renderer.domElement);
+    window.addEventListener('resize', function () {
+    renderer.setSize(elem.clientWidth, elem.clientHeight);
+    camera.aspect = elem.clientWidth/elem.clientHeight;
+    camera.updateProjectionMatrix();
+    }, false);
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.rotateSpeed = 0.05;
+    controls.dampingFactor = 0.1;
+    controls.enableZoom = true;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = .75;
+    var scene = new THREE.Scene();
+    scene.add(new THREE.HemisphereLight(0xffffff, 1.5));
+    (new THREE.STLLoader()).load(model, function (geometry) {
+    var material = new THREE.MeshPhongMaterial({ 
+        color: 0xff5533, 
+        specular: 100, 
+        shininess: 100 });
+    var mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+    var middle = new THREE.Vector3();
+    geometry.computeBoundingBox();
+    geometry.boundingBox.getCenter(middle);
+    mesh.geometry.applyMatrix(new THREE.Matrix4().makeTranslation( 
+                                -middle.x, -middle.y, -middle.z ) );
+    var largestDimension = Math.max(geometry.boundingBox.max.x,
+                            geometry.boundingBox.max.y, 
+                            geometry.boundingBox.max.z)
+    amera.position.z = largestDimension * 1.5;
+    var animate = function () {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+    };                          
+        animate();
+    });
+    
+ </script>
+
+ <script type="text/javascript">
+    window.onload = function() {
+    STLViewer("https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/STLs/Test_Prints/Voron_Design_Cube_v7.stl", "model")
+    }
+</script>
 
 Use the default slicer settings, but make sure the hotend temperature and bed temperature are correct for the filament you are using. A good starting point is 240C hotend temperature, 100C heated bed temperature, and 92% flow for ABS.
 

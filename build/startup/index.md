@@ -4,6 +4,11 @@ title: Initial Startup
 parent: The Build
 nav_order: 5
 ---
+# What printer are you building? 
+<button name="v0button" onclick="http://www.google.com">I'm building a V0</button>
+<button name="v1button" onclick="http://www.google.com">I'm building a V1/Trident</button>
+<button name="v2button" onclick="http://www.google.com">I'm building a V2</button>
+<button name="VSWButton" onclick="http://www.google.com">I'm building a Switchwire</button>
 
 # Initial Startup Checks
 

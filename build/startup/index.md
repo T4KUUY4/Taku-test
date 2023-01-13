@@ -4,11 +4,7 @@ title: Initial Startup
 parent: The Build
 nav_order: 5
 ---
-# What printer are you building? 
-<button name="v0button" onclick="http://www.google.com">I'm building a V0</button>
-<button name="v1button" onclick="http://www.google.com">I'm building a V1/Trident</button>
-<button name="v2button" onclick="http://www.google.com">I'm building a V2</button>
-<button name="VSWButton" onclick="http://www.google.com">I'm building a Switchwire</button>
+
 
 # Initial Startup Checks
 
@@ -43,6 +39,12 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 
 Perform the above steps again with the bed.
 
+# What printer are you building? 
+<button name="v0button" onclick="http://www.google.com">I'm building a V0</button>
+<button name="v1button" onclick="http://www.google.com">I'm building a V1/Trident</button>
+<button name="v2button" onclick="http://www.google.com">I'm building a V2</button>
+<button name="VSWButton" onclick="http://www.google.com">I'm building a Switchwire</button>
+
 ## Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send the following command in the terminal:
@@ -51,19 +53,27 @@ To verify that each stepper motor is operating correctly, send the following com
 
 Run this command for each of the motors:
 
-### V0, SW
-* stepper_x
-* stepper_y
-* stepper_z
-* extruder
+<details id="switchwire">
+  <summary>Click me</summary>
+  	### V0, SW
+	* stepper_x
+	* stepper_y
+	* stepper_z
+	* extruder
+</details>
 
-### V1, Legacy
+<details id="Legacy">
+  <summary>Click me</summary>
+ ### V1, Legacy
 * stepper_x
 * stepper_y
 * stepper_z
 * stepper_z1 
 * extruder
+</details>
 
+<details id="Trident">
+  <summary>Click me</summary>
 ### Trident
 * stepper_x
 * stepper_y
@@ -71,7 +81,10 @@ Run this command for each of the motors:
 * stepper_z1 
 * stepper_z2 
 * extruder
+</details>
 
+<details id="V2">
+  <summary>Click me</summary>
 ### V2
 * stepper_x
 * stepper_y
@@ -80,6 +93,9 @@ Run this command for each of the motors:
 * stepper_z2   
 * stepper_z3   
 * extruder
+</details>
+
+
 
 The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.
 

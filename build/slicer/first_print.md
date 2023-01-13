@@ -4,7 +4,7 @@ title: First Print
 parent: The Build
 nav_order: 7
 ---
-<script src="../scripts/stl_viewer.min.js"></script>
+<script src="../../scripts/stl_viewer.min.js"></script>
 <script>
             var stl_viewer=new StlViewer
             (

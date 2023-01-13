@@ -55,19 +55,20 @@ Run this command for each of the motors:
 
 <details id="switchwire">
   <summary>Click me</summary>
- ```
-  	### V0, SW
-	* stepper_x
-	* stepper_y
-	* stepper_z
-	* extruder
-	```
+
+### V0, SW
+```
+* stepper_x
+* stepper_y
+* stepper_z
+* extruder
+```
 </details>
 
 <details id="Legacy">
   <summary>Click me</summary>
-  ```
- ### V1, Legacy
+  ### V1, Legacy
+```
 * stepper_x
 * stepper_y
 * stepper_z
@@ -78,8 +79,8 @@ Run this command for each of the motors:
 
 <details id="Trident">
   <summary>Click me</summary>
- ```
 ### Trident
+```
 * stepper_x
 * stepper_y
 * stepper_z
@@ -91,8 +92,8 @@ Run this command for each of the motors:
 
 <details id="V2">
   <summary>Click me</summary>
-  ```
 ### V2
+```
 * stepper_x
 * stepper_y
 * stepper_z

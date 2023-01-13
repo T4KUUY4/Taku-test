@@ -4,9 +4,9 @@ title: First Print
 parent: The Build
 nav_order: 7
 ---
-<script src="/build/three.min.js"></script>
-<script src="/examples/js/loaders/STLLoader.js"></script>
-<script src="/examples/js/controls/OrbitControls.js"></script>
+<script src="scripts/three.min.js"></script>
+<script src="scripts/STLLoader.js"></script>
+<script src="scripts/OrbitControls.js"></script>
 
 # First Print
 

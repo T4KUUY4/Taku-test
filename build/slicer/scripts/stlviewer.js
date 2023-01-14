@@ -7,7 +7,7 @@ function STLViewerEnable(classname) {
 }
 
 function STLViewer(elem, model) {
-
+    console.log("loaded");
     if (!WEBGL.isWebGLAvailable()) {
         elem.appendChild(WEBGL.getWebGLErrorMessage());
         return;

@@ -33,9 +33,7 @@ Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](http
 
 <script> src="scripts/stlviewer.js"</script>
 <script type="text/javascript">
-    window.onload = function() {
-    STLViewer("Voron_Design_Cube_v7.stl", "model")
-    }
+    window.onload = function() {STLViewer("Voron_Design_Cube_v7.stl", "model")}
 </script>
 
 Use the default slicer settings, but make sure the hotend temperature and bed temperature are correct for the filament you are using. A good starting point is 240C hotend temperature, 100C heated bed temperature, and 92% flow for ABS.

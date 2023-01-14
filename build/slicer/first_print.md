@@ -16,7 +16,8 @@ nav_order: 7
 Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/STLs/Test_Prints), and open the file in your chosen slicer. 
 
 <div id="model" style="width: 500px; height: 500px"> </div>
-	<script type="text/javascript">
+
+<script type="text/javascript">
         window.onload = function() {
         STLViewer("https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/STLs/Test_Prints/Voron_Design_Cube_v7.stl", "model")
         }

@@ -16,7 +16,7 @@ function STLViewer(model, elementID) {
         controls.enableDamping = true;
         controls.rotateSpeed = 0.4;
         controls.dampingFactor = 0.1;
-        controls.enableZoom = true;
+        controls.enableZoom = false;
         controls.autoRotate = false;
         controls.autoRotateSpeed = 0;
         

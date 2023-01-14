@@ -11,7 +11,7 @@ nav_order: 7
 <script type="importmap">
   {
     "imports": {
-      "three": "https://unpkg.com/three@<version>/build/three.module.js"
+      "three": "https://unpkg.com/three@0.140.0/build/three.module.js"
     }
   }
 </script>

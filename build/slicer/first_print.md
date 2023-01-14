@@ -6,23 +6,8 @@ nav_order: 7
 ---
 
 
-<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-<script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.140.0/build/three.module.js"
-    }
-  }
-</script>
-
-<script type="module">
-
-  import * as THREE from 'three';
-
-  const scene = new THREE.Scene();
-
-</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r117/three.min.js"></script>
+<script src="https://threejs.org/examples/js/loaders/STLLoader.js"></script>
 
 # First Print
 
@@ -31,7 +16,7 @@ Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](http
 <div id="model" style="width: 500px; height: 500px"> </div>
 
 
-<script> src="scripts/stlviewer.js"</script>
+<!-- <script> src="scripts/stlviewer.js"</script> -->
 <script type="text/javascript">
     window.onload = function() {STLViewer("Voron_Design_Cube_v7.stl", "model")}
 </script>

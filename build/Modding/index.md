@@ -12,7 +12,7 @@ nav_order: 8
 <script src="viewer.js"></script>
 
 
-<div class="album py-5 bg-light">
+<div class="album py-5 bg-transparent">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -64,7 +64,8 @@ nav_order: 8
             </div>
           </div>
         </div>
-  </div>
+    </div>
+</div>
 
 
 <script type="text/javascript">

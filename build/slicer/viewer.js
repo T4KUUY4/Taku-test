@@ -17,8 +17,9 @@ function STLViewer(model, elementID) {
         controls.rotateSpeed = 0.4;
         controls.dampingFactor = 0.1;
         controls.enableZoom = true;
-        controls.autoRotate = true;
+        controls.autoRotate = false;
         controls.autoRotateSpeed = 0;
+        
 
         var scene = new THREE.Scene();
         scene.add(new THREE.HemisphereLight(0xffffff, 1.5));
@@ -41,13 +42,15 @@ function STLViewer(model, elementID) {
                                               var largestDimension = Math.max(geometry.boundingBox.max.x,
                                                 geometry.boundingBox.max.y, 
                                                 geometry.boundingBox.max.z)
-                    camera.position.z = largestDimension * 1.5;
-
+                 mesh.quaternion.setFromEuler( new THREE.Euler( - Math.PI / 2, 0, 135 ) );                         
+                    camera.position.z = largestDimension * 4;
+                                                      
 
                     var animate = function () {
                         requestAnimationFrame(animate);
                         controls.update();
                         renderer.render(scene, camera);
+                        
                     }; 
 
 

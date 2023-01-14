@@ -6,19 +6,20 @@ nav_order: 7
 ---
 
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r117/three.min.js"></script>
-<script src="https://threejs.org/examples/js/loaders/STLLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r120/examples/js/loaders/STLLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r120/examples/js/controls/OrbitControls.js"></script>
+<script src="viewer.js"></script>
 
 # First Print
 
 Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/STLs/Test_Prints), and open the file in your chosen slicer. 
 
 <div id="model" style="width: 500px; height: 500px"> </div>
-
-
-<!-- <script> src="scripts/stlviewer.js"</script> -->
-<script type="text/javascript">
-    window.onload = function() {STLViewer("Voron_Design_Cube_v7.stl", "model")}
+	<script type="text/javascript">
+        window.onload = function() {
+        STLViewer("https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/STLs/Test_Prints/Voron_Design_Cube_v7.stl", "model")
+        }
 </script>
 
 Use the default slicer settings, but make sure the hotend temperature and bed temperature are correct for the filament you are using. A good starting point is 240C hotend temperature, 100C heated bed temperature, and 92% flow for ABS.

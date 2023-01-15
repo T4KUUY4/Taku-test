@@ -43,10 +43,11 @@ Perform the above steps again with the bed.
 
 # What printer are you building? 
 
-<button type="button" id="v0button" class="btn btn-danger">I'm building a V0</button>
-<button type="button" id="v1button" class="btn btn-danger">I'm building a V1/Trident</button>
-<button type="button" id="v2button" class="btn btn-danger">I'm building a V2</button>
-<button type="button" id="vswbutton" class="btn btn-danger">I'm building a Switchwire</button>
+<button type="button" id="v0button" class="btn btn-danger" onclick="testbutton()">I'm building a V0</button>
+<button type="button" id="v1button" class="btn btn-danger" onclick="testbutton2()" >I'm building a V1/Trident</button>
+<br>
+<button type="button" id="v2button" class="btn btn-danger" onclick="testbutton3()">I'm building a V2</button>
+<button type="button" id="vswbutton" class="btn btn-danger" onclick="testbutton4()">I'm building a Switchwire</button>
 
 
 

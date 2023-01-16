@@ -50,7 +50,7 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 
 ![](./images/mainsail_controls.png)
 
-  
+# General Checks
 
 ## Verify Temperature
 
@@ -82,7 +82,33 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 
 Perform the above steps again with the bed.
 
+## Endstop Check
+
   
+
+Make sure that none of the X, Y, or Z endstops are being pressed. Then send a `QUERY_ENDSTOPS` command. The terminal window should respond with the following:
+
+  
+
+```
+
+Send: QUERY_ENDSTOPS
+
+Recv: x:open y:open z:open
+
+```
+
+  
+
+If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed. Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open. Repeat with the Y and Z endstops.
+
+  
+
+If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
+
+  
+
+`endstop_pin: P1.28` -> `endstop_pin: !P1.28`
 
 # What printer are you building?
 
@@ -201,45 +227,10 @@ The STEPPER_BUZZ command will cause the given stepper to move one millimeter in 
 
 * If the motor buzzes, check the stepper motor wiring.
 
-  
 
-#### V2 motor positions (Others may vary)
+<button  type="button"  id="unlockrestbutton"  class="btn btn-danger"  onclick="unlockrest()">I am done with these checks and everything works as expected</button>
 
-  
-
-![](./images/V2-motor-positions.png)
-
-  
-
-## Endstop Check
-
-  
-
-Make sure that none of the X, Y, or Z endstops are being pressed. Then send a `QUERY_ENDSTOPS` command. The terminal window should respond with the following:
-
-  
-
-```
-
-Send: QUERY_ENDSTOPS
-
-Recv: x:open y:open z:open
-
-```
-
-  
-
-If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed. Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open. Repeat with the Y and Z endstops.
-
-  
-
-If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
-
-  
-
-`endstop_pin: P1.28` -> `endstop_pin: !P1.28`
-
-  
+<div class="defaulthide" id="unlockhoming">
 
 ## XY Homing Check
 
@@ -321,7 +312,12 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 **Important:** Do not unplug or re-plug motors from MCUs without powering down the printer. Damage to MCU may result.
 
-  
+
+<button  type="button"  class="btn btn-danger"  onclick="donehoming()">I'm done with this step</button>
+</div>
+
+
+<div class="defaulthide" id="bedolcatingv2">
 
 ## Bed locating (V2)
 
@@ -337,8 +333,11 @@ The Z endstop should be located to be in line with the nozzle, when the toolhead
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate. The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame. If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose (best done hot).
 
-  
 
+
+<button  type="button"  class="btn btn-danger"  onclick="donebed()">I'm done with this step</button>
+</div>
+<div id="bedlocatingtrident" class="defaulthide">
 ## Bed locating (V1, Trident, Legacy)
 
   
@@ -353,9 +352,11 @@ The Z endstop should be located at close to max X position. Home X and Y with `G
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
-  
+<button  type="button"  class="btn btn-danger"  onclick="donebed()">I'm done with this step</button>
+</div>
 
-## Define 0,0 Point (V0, V1, Trident, V2, Legacy)
+<div id="point00" class="defaulthide">
+## Define 0,0 Point
 
   
 
@@ -402,9 +403,10 @@ If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* val
   
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
+<button  type="button"  class="btn btn-danger"  onclick="done00()">I'm done with this step</button>
+</div>
 
-  
-
+<div id="startpin" class="defaulthide">
 ## Z Endstop Pin Location (V1, Trident, V2, Legacy)
 
   
@@ -421,16 +423,19 @@ If anything is updated in the printer configuration file, save the file and rest
 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.
 
-  
+  <button  type="button"  class="btn btn-danger"  onclick="donepin()">I'm done with this step</button>
+</div>
 
+<div id="pinv0" class="defaulthide">
 ## Z Endstop Location (V0)
 
   
 
 The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is.
 
-  
-
+<button  type="button"  class="btn btn-danger"  onclick="donepin()">I'm done with this step</button>
+</div>
+<div class="defaulthide" id="probetest">
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
   
@@ -496,7 +501,7 @@ Recv: // probe accuracy results: maximum 4.975000, minimum 4.932500, range 0.042
 standard deviation 0.011948
 
 ```
-
+</div>
   
 
 ## PID Tune Bed & Hotend

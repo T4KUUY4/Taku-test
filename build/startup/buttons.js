@@ -1,15 +1,35 @@
-function testbutton() {
-    console.log("im working");
+function v0swbutton() {
+  var x = document.getElementById("v0swmotors");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
+}
 
-  function testbutton2() {
-    console.log("im working2");
+function v0swbutton() {
+  var x = document.getElementById("tridentbutton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
+}
 
-  function testbutton3() {
-    console.log("im working3");
+function v0swbutton() {
+  var x = document.getElementById("v2button");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
+}
 
-  function testbutton4() {
-    console.log("im working4");
+function v0swbutton() {
+  var x = document.getElementById("switchwirebutton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
+}

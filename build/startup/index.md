@@ -43,11 +43,11 @@ Perform the above steps again with the bed.
 
 # What printer are you building? 
 
-<button type="button" id="v0button" class="btn btn-danger" onclick="testbutton()">I'm building a V0</button>
-<button type="button" id="v1button" class="btn btn-danger" onclick="testbutton2()" >I'm building a V1/Trident</button>
+<button type="button" id="v0button" class="btn btn-danger" onclick="v0button()">I'm building a V0</button>
+<button type="button" id="v1button" class="btn btn-danger" onclick="tridentbutton()" >I'm building a V1/Trident</button>
 <br>
-<button type="button" id="v2button" class="btn btn-danger" onclick="testbutton3()">I'm building a V2</button>
-<button type="button" id="vswbutton" class="btn btn-danger" onclick="testbutton4()">I'm building a Switchwire</button>
+<button type="button" id="v2button" class="btn btn-danger" onclick="v2button()">I'm building a V2</button>
+<button type="button" id="vswbutton" class="btn btn-danger" onclick="switchwirebutton()">I'm building a Switchwire</button>
 
 
 
@@ -57,23 +57,18 @@ To verify that each stepper motor is operating correctly, send the following com
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
-Run this command for each of the motors:
+Run this command for each of the motors below:
 
-<details id="switchwire">
-  <summary>Click me</summary>
-
-### V0, SW
+<div class="defaulthide" id="v0swmotors">
 ```
 * stepper_x
 * stepper_y
 * stepper_z
 * extruder
 ```
-</details>
+<div>
 
-<details id="Legacy">
-  <summary>Click me</summary>
-  ### V1, Legacy
+<div class="defaulthide" id="legacymotors">
 ```
 * stepper_x
 * stepper_y
@@ -81,11 +76,9 @@ Run this command for each of the motors:
 * stepper_z1 
 * extruder
 ```
-</details>
+<div>
 
-<details id="Trident">
-  <summary>Click me</summary>
-### Trident
+<div class="defaulthide" id="tridentmotors">
 ```
 * stepper_x
 * stepper_y
@@ -94,11 +87,9 @@ Run this command for each of the motors:
 * stepper_z2 
 * extruder
 ```
-</details>
+<div>
 
-<details id="V2">
-  <summary>Click me</summary>
-### V2
+<div class="defaulthide" id="v2wmotors">
 ```
 * stepper_x
 * stepper_y
@@ -108,7 +99,10 @@ Run this command for each of the motors:
 * stepper_z3   
 * extruder
 ```
-</details>
+<div>
+
+
+
 
 
 

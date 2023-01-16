@@ -1,39 +1,41 @@
+function testscript() {
+  console.log("working");
+}
+
+
 function v0button() {
   var x = document.getElementById("v0swmotors");
-  if (x.style.display === "none") {
     x.style.display = "block";
-  } 
 }
+
+
 
 function tridentbutton() {
   var x = document.getElementById("tridentmotors");
-  if (x.style.display === "none") {
+
     x.style.display = "block";
     document.getElementById("bedlocatingtrident").style.display = "block";
-  } 
+  
 }
 
 function v2button() {
   var x = document.getElementById("v2motors");
-  if (x.style.display === "none") {
     x.style.display = "block";
     document.getElementById("bedlocatingv2").style.display = "block";
 
-  } 
+  
 }
 
 function swbutton() {
   var x = document.getElementById("v0swmotors");
-  if (x.style.display === "none") {
     x.style.display = "block";
-  } 
+  
 }
 
 function unlockhoming() {
   var x = document.getElementById("unlockhoming");
-  if (x.style.display === "none") {
     x.style.display = "block";
-  } 
+  
 }
 
 function donehoming() {
@@ -46,7 +48,7 @@ function donehoming() {
   }
 
   if (y.style.display === "block") {
-    document.getElementById("bedolcatingv2").style.display = "block";
+    document.getElementById("bedolocatingv2").style.display = "block";
   }
 }
 

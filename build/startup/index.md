@@ -60,37 +60,37 @@ To verify that each stepper motor is operating correctly, send the following com
 Run this command for each of the motors below:
 
 <div class="defaulthide" id="v0swmotors">
-```
+`
 * stepper_x
 * stepper_y
 * stepper_z
 * extruder
-```
+`
 <div>
 
 <div class="defaulthide" id="legacymotors">
-```
+`
 	* stepper_x
 	* stepper_y
 	* stepper_z
 	* stepper_z1 
 	* extruder
-```	
+`	
 <div>
 
 <div class="defaulthide" id="tridentmotors">
-```
+`
 * stepper_x
 * stepper_y
 * stepper_z
 * stepper_z1 
 * stepper_z2 
 * extruder
-```
+`
 <div>
 
 <div class="defaulthide" id="v2motors">
-```
+`
 * stepper_x
 * stepper_y
 * stepper_z
@@ -98,7 +98,7 @@ Run this command for each of the motors below:
 * stepper_z2
 * stepper_z3
 * extruder
-```
+`
 </div>
 
 

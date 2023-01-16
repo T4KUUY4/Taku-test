@@ -1,4 +1,3 @@
-
 ---
 
 layout: default
@@ -228,7 +227,7 @@ The STEPPER_BUZZ command will cause the given stepper to move one millimeter in 
 * If the motor buzzes, check the stepper motor wiring.
 
 
-<button  type="button"  id="unlockrestbutton"  class="btn btn-danger"  onclick="unlockrest()">I am done with these checks and everything works as expected</button>
+<button  type="button"  id="unlockrestbutton"  class="btn btn-danger"  onclick="unlockhoming()">I am done with these checks and everything works as expected</button>
 
 <div class="defaulthide" id="unlockhoming">
 

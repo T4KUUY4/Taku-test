@@ -37,12 +37,11 @@ function swbutton() {
   }
 }
 
-function unlockrest() {
+function unlockhoming() {
   var x = document.getElementById("unlockhoming");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
-   
   }
 }
 

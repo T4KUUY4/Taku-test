@@ -132,14 +132,11 @@ Run this command for each of the motors below:
 
 ```
 
-<div>
-
-  
+</div>
 
 <div  class="defaulthide"  id="legacymotors">
 
 ```
-
 * stepper_x
 
 * stepper_y
@@ -149,10 +146,8 @@ Run this command for each of the motors below:
 * stepper_z1
 
 * extruder
-
 ```
-<div>
-
+</div>
 <div class="defaulthide" id="tridentmotors">
 ```
 
@@ -169,7 +164,7 @@ Run this command for each of the motors below:
 * extruder
 
 ```
-<div>
+</div>
 
 <div class="defaulthide" id="v2motors">
 ```
@@ -189,7 +184,6 @@ Run this command for each of the motors below:
 * extruder
 
 ```
-
 </div>
 
   

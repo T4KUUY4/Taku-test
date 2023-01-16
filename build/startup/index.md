@@ -47,7 +47,7 @@ Perform the above steps again with the bed.
 <button type="button" id="v1button" class="btn btn-danger" onclick="tridentbutton()" >I'm building a V1/Trident</button>
 <br>
 <button type="button" id="v2button" class="btn btn-danger" onclick="v2button()">I'm building a V2</button>
-<button type="button" id="vswbutton" class="btn btn-danger" onclick="switchwirebutton()">I'm building a Switchwire</button>
+<button type="button" id="vswbutton" class="btn btn-danger" onclick="swbutton()">I'm building a Switchwire</button>
 
 
 
@@ -105,10 +105,14 @@ Run this command for each of the motors below:
 
 
 
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this movement ten times.
 
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.
-
-If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
+  
+* If the stepper does not move at all verify the following the "enable_pin" and "step_pin" in your printer.cfg.
+* If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting.
+* If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. To do this, add a '!' in front of the "dir_pin". Example: "dir_pin: !PIN"
+* If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
+* If the motor buzzes, check the stepper motor wiring. 
 
 #### V2 motor positions (Others may vary)
 

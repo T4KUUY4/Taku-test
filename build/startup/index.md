@@ -69,13 +69,13 @@ Run this command for each of the motors below:
 <div>
 
 <div class="defaulthide" id="legacymotors">
-`
+```
 	* stepper_x
 	* stepper_y
 	* stepper_z
 	* stepper_z1 
 	* extruder
-`	
+```
 <div>
 
 <div class="defaulthide" id="tridentmotors">

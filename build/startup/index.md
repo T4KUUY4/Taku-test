@@ -60,7 +60,7 @@ To verify that each stepper motor is operating correctly, send the following com
 Run this command for each of the motors below:
 
 <div class="defaulthide" id="v0swmotors">
-	```	
+```	
 
 	* stepper_x
 	* stepper_y

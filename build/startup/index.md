@@ -89,17 +89,17 @@ Run this command for each of the motors below:
 ```
 <div>
 
-<div class="defaulthide" id="v2wmotors">
+<div class="defaulthide" id="v2motors">
 ```
 * stepper_x
 * stepper_y
 * stepper_z
-* stepper_z1   
-* stepper_z2   
-* stepper_z3   
+* stepper_z1
+* stepper_z2
+* stepper_z3
 * extruder
 ```
-<div>
+</div>
 
 
 

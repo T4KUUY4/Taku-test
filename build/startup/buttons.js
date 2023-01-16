@@ -17,7 +17,7 @@ function tridentbutton() {
 }
 
 function v2button() {
-  var x = document.getElementById("v2button");
+  var x = document.getElementById("v2motors");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

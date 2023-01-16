@@ -61,6 +61,11 @@ Run this command for each of the motors below:
 
 <div class="defaulthide" id="v0swmotors">
 ```
+	dte
+	```	
+	
+	
+```
 	* stepper_x
 	* stepper_y
 	* stepper_z

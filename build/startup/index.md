@@ -13,7 +13,7 @@ nav_order: 5
 
 <link  rel="stylesheet"  href="style.css">
 
-<script  src="buttons.js"></script>
+<script  src="buttons.js"> </script>
 
   
   

@@ -8,7 +8,7 @@ function v0button() {
 }
 
 function tridentbutton() {
-  var x = document.getElementById("tridentbutton");
+  var x = document.getElementById("tridentmotors");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

@@ -2,9 +2,7 @@ function v0button() {
   var x = document.getElementById("v0swmotors");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    
-  }
+  } 
 }
 
 function tridentbutton() {
@@ -12,9 +10,7 @@ function tridentbutton() {
   if (x.style.display === "none") {
     x.style.display = "block";
     document.getElementById("bedlocatingtrident").style.display = "block";
-  } else {
-    
-  }
+  } 
 }
 
 function v2button() {
@@ -23,26 +19,21 @@ function v2button() {
     x.style.display = "block";
     document.getElementById("bedlocatingv2").style.display = "block";
 
-  } else {
-    
-  }
+  } 
 }
 
 function swbutton() {
   var x = document.getElementById("v0swmotors");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-   
-  }
+  } 
 }
 
 function unlockhoming() {
   var x = document.getElementById("unlockhoming");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-  }
+  } 
 }
 
 function donehoming() {
@@ -63,9 +54,7 @@ function donebed() {
   var x = document.getElementById("point00");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-   
-  }
+  } 
 }
 
 

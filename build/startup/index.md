@@ -12,8 +12,10 @@ nav_order: 5
 
 <link  rel="stylesheet"  href="style.css">
 <script  src="buttons.js"> </script>
-
-<button  type="button"  class="btn btn-danger"  onclick="testscript()"><img src="./images/02render.png" /> Whoop im a test</button>
+# Please select your printer model to start
+<br>
+## Voron V0
+<button  type="button"  class="btn btn-danger"  onclick="testscript()"><img src="./images/02render.png" /></button>
 
 
 

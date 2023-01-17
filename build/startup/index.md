@@ -14,8 +14,23 @@ nav_order: 5
 <script  src="buttons.js"> </script>
 # Please select your printer model to start
 <br>
-## Voron V0
 <button  type="button"  class="btn btn-danger"  onclick="testscript()"><img src="./images/02render.png" /></button>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+#Vorn V0
+  <button type="button" class="btn btn-danger" onclick="testscript()"><img src="./images/02render.png" /></button>
+  <br>
+  #Voron V2
+  <button type="button" class="btn btn-danger" onclick="testscript()"><img src="./images/02render.png" /></button>
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+#Voron Trident
+  <button type="button" class="btn btn-danger" onclick="testscript()"><img src="./images/02render.png" /></button>
+  <br>
+#Voron Switchwire
+  <button type="button" class="btn btn-danger" onclick="testscript()"><img src="./images/02render.png" /></button>
+</div>
 
 
 

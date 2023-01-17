@@ -5,14 +5,13 @@ function testscript() {
 
 function v0button() {
   var x = document.getElementById("v0swmotors");
-    x.style.display = "block";
+  x.style.display = "block";
 }
 
 
 
 function tridentbutton() {
   var x = document.getElementById("tridentmotors");
-
     x.style.display = "block";
     document.getElementById("bedlocatingtrident").style.display = "block";
   

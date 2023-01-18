@@ -19,7 +19,7 @@ nav_exclude: true
 Please follow each step closely and once ready, click the "I am done, let's move on" button.
 
 
-<button type="button" class="btn btn-danger" id="button0" onclick="v0start()">I am done, let's move on</button>
+<button type="button" class="btn btn-danger" id="button0" onclick="v0start()">Okay, let's start!</button>
 </div>
 <div class="defaulthide" id="0" markdown="1">
 
@@ -53,7 +53,11 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 
 ![](./images/mainsail_controls.png)
 <br>
-<button type="button" class="btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
+
+
+
 
 </div>
 <div class="defaulthide" id="1" markdown="1">
@@ -67,7 +71,9 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 
 Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the `sensor_type` and `sensor_pin` settings for the extruder and/or bed.
 <br>
-<button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
+
 
 </div>
 
@@ -79,7 +85,8 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 
 Perform the above steps again with the bed.
 <br>
-<button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 
@@ -111,7 +118,9 @@ The STEPPER_BUZZ command will cause the given stepper to move one millimeter in 
 
 * If the motor buzzes, check the stepper motor wiring.
 <p></p>
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 
 </div>
 
@@ -133,7 +142,9 @@ If it is found that one of the endstops has inverted login (i.e. it reads as "op
 
 `endstop_pin: P1.28` -> `endstop_pin: !P1.28`
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 
 </div>
 
@@ -161,7 +172,9 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 ![](./images/V0-motor-configuration-guide.png)
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 <div class="defaulthide" id="6" markdown="1">
@@ -190,7 +203,9 @@ If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* val
 *If the Z endstop pin location has been previously defined, be sure to re-follow the process to set the Z endstop pin location (if applicable).*
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 
@@ -199,7 +214,9 @@ If anything is updated in the printer configuration file, save the file and rest
 ## Z Endstop Location 
 The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 
@@ -224,7 +241,9 @@ Set the part cooling fans to 25% (`M106 S64`) and then run:
 
 It will perform a PID calibration routine that will last about 5 minutes. Once it is finished, type `SAVE_CONFIG` which will save the parameters into your configuration file.
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 
@@ -241,7 +260,9 @@ Once the screw is adjusted so that a small amount of friction is felt, run eithe
 
 After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 
@@ -274,7 +295,9 @@ The "babystepping" controls may be used to fine tune the z offset.
 #### Without LCD Screen
 If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mainsail and Fluidd, but requires some additional work for Octoprint.
 
-<br><button type="button" class="btn btn-danger" id="button2" onclick="moveonv0()">I am done, let's move on</button>
+<br>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="moveonv0()">I am done, let's move on</button>
+<button type="button" class="text-center btn btn-danger" id="button1" onclick="movebackv0()">Eh.. nevermind. Let's go back again</button>
 </div>
 
 

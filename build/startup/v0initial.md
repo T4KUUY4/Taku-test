@@ -18,6 +18,19 @@ nav_exclude: true
 # Welcome to the initial startup guide for Voron V0
 Please follow each step closely and once ready, click the "I am done, let's move on" button.
 
+### Select your webinterface
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="octocheck">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Octoprint
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="mainsailcheck" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Mainsail/Fluidd
+  </label>
+</div>
 
 <button type="button" class="btn btn-danger" id="button0" onclick="v0start()">Okay, let's start!</button>
 </div>

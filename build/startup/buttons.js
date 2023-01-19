@@ -11,6 +11,22 @@ function v0start() {
 
 }
 
+
+function checkradio() {
+
+
+  if (document.getElementById('octocheck').checked) {
+  console.log("oct");
+  document.getElementById("octoconsole").style.display = "block";
+  }
+  
+  if (document.getElementById('mainsailcheck').checked) {
+  document.getElementById("mainsailconsole").style.display = "block";
+  console.log("mains");
+  }
+  
+  }
+
 var currentone = 0;
 var currentprogress = 10;
 var currentwidth= 10;

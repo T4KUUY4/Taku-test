@@ -35,12 +35,16 @@ Any time commands are requested to be issued, those will happen in the 'Terminal
 
   
 
+
+<div class="defaulthide" id="octoconsole" markdown="1">
 ![](./images/octoprint_terminal_tab.png)
+</div>
 
   
-
+<div class="defaulthide" id="mainsailconsole" markdown="1">
 ![](./images/mainsail_terminal.png)
-
+</div>
+  
   
 
 Any time movements need to be made, those will happen in the 'Control' tab / section of the Octoprint, Mainsail, or Fluidd web UI. The numbers underneath X, Y, and Z control the movement distance.
